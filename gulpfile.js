@@ -5,6 +5,7 @@ var sass = require('gulp-sass');
 var cssmin = require('gulp-cssmin');
 var watch = require('gulp-watch');
 var neat = require('node-neat').includePaths;
+var livereload = require('gulp-livereload');
 
 var paths = {
   scripts: 'js/',
@@ -13,6 +14,7 @@ var paths = {
 };
 
 gulp.task('watch', ['sass'], function() {
+  livereload.listen();
   gulp.watch(paths.scss, ['sass']);
 });
 
@@ -31,6 +33,7 @@ gulp.task('sass', function() {
     }))
     .pipe(cssmin())
     .pipe(gulp.dest('.'))
+    .pipe(livereload())
     .pipe(notify('Sass compiled successfully.'));
 });
 
