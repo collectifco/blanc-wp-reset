@@ -71,13 +71,13 @@ function optionsframework_options() {
 		'std' => '2016',
 		'type' => 'text'
 	);
-	$options[] = array(
-		'name' => __('Google Webmasters', 'html5reset'),
-		'desc' => __("Speaking of Google, don't forget to set your site up: <a href='http://google.com/webmasters' target='_blank'>http://google.com/webmasters</a>", 'html5reset'),
-		'id' => 'meta_google',
-		'std' => '',
-		'type' => 'text'
-	);
+	// $options[] = array(
+	// 	'name' => __('Google Webmasters', 'html5reset'),
+	// 	'desc' => __("Speaking of Google, don't forget to set your site up: <a href='http://google.com/webmasters' target='_blank'>http://google.com/webmasters</a>", 'html5reset'),
+	// 	'id' => 'meta_google',
+	// 	'std' => '',
+	// 	'type' => 'text'
+	// );
 	$options[] = array(
 		'name' => __('Author Name', 'html5reset'),
 		'desc' => __('Populates meta author tag.', 'html5reset'),
@@ -85,13 +85,13 @@ function optionsframework_options() {
 		'std' => '',
 		'type' => 'text'
 	);
-	$options[] = array(
-		'name' => __('Mobile Viewport', 'html5reset'),
-		'desc' => __('Uncomment to use; use thoughtfully!', 'html5reset'),
-		'id' => 'meta_viewport',
-		'std' => 'width=device-width, initial-scale=1.0',
-		'type' => 'text'
-	);
+	// $options[] = array(
+	// 	'name' => __('Mobile Viewport', 'html5reset'),
+	// 	'desc' => __('Uncomment to use; use thoughtfully!', 'html5reset'),
+	// 	'id' => 'meta_viewport',
+	// 	'std' => 'width=device-width, initial-scale=1.0',
+	// 	'type' => 'text'
+	// );
 
 // Icons
 	// $options[] = array(
@@ -145,27 +145,27 @@ function optionsframework_options() {
 		'std' => '',
 		'type' => 'text'
 	);
-	$options[] = array(
-		'name' => __('', 'html5reset'),
-		'desc' => __("twitter:title (the user's Twitter ID)", 'html5reset'),
-		'id' => 'meta_app_twt_title',
-		'std' => '',
-		'type' => 'text'
-	);
-	$options[] = array(
-		'name' => __('', 'html5reset'),
-		'desc' => __('twitter:description (maximum 200 characters)', 'html5reset'),
-		'id' => 'meta_app_twt_description',
-		'std' => '',
-		'type' => 'textarea'
-	);
-	$options[] = array(
-		'name' => __('', 'html5reset'),
-		'desc' => __('twitter:url (url for the content)', 'html5reset'),
-		'id' => 'meta_app_twt_url',
-		'std' => '',
-		'type' => 'text'
-	);
+	// $options[] = array(
+	// 	'name' => __('', 'html5reset'),
+	// 	'desc' => __("twitter:title (the user's Twitter ID)", 'html5reset'),
+	// 	'id' => 'meta_app_twt_title',
+	// 	'std' => '',
+	// 	'type' => 'text'
+	// );
+	// $options[] = array(
+	// 	'name' => __('', 'html5reset'),
+	// 	'desc' => __('twitter:description (maximum 200 characters)', 'html5reset'),
+	// 	'id' => 'meta_app_twt_description',
+	// 	'std' => '',
+	// 	'type' => 'textarea'
+	// );
+	// $options[] = array(
+	// 	'name' => __('', 'html5reset'),
+	// 	'desc' => __('twitter:url (url for the content)', 'html5reset'),
+	// 	'id' => 'meta_app_twt_url',
+	// 	'std' => '',
+	// 	'type' => 'text'
+	// );
 
 // App: Facebook
 	$options[] = array(

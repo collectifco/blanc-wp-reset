@@ -68,11 +68,7 @@
 	}
 	add_filter( 'wp_title', 'html5reset_wp_title', 10, 2 );
 
-
-
-
 //OLD STUFF BELOW
-
 
 	// Load jQuery
 	if ( !function_exists( 'core_mods' ) ) {

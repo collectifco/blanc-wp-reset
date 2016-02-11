@@ -53,7 +53,6 @@
 		*/
 		if (true == of_get_option('meta_viewport'))
 			echo '<meta name="viewport" content="' . of_get_option("meta_viewport") . '" />';
-
 	?>
 
 	<!-- concatenate and minify for production -->
