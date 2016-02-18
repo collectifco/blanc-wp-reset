@@ -3,9 +3,6 @@ $line-height-unitless: 1.45;
 $line-height: #{($base-font-size*$line-height-unitless)};
 $line-height-2x: #{($base-font-size*$line-height-unitless)*2};
 
-$primary-color: #00cfb5;
-$secondary-color: #c00;
-
 $subdued-grey: #fafafa;
 $light-grey: #CEDBE2;
 $grey: #95A7B1;
@@ -13,10 +10,17 @@ $dark-grey: #7290A0;
 $white: #fff;
 $black: #222;
 
+$primary-color: #00cfb5;
+$secondary-color: #15d683;
+
 $body-text-color: $black;
 $heading-text-color: #111;
 
+$background-color: $subdued-grey;
+
 $link-color: $primary-color;
+
+$border-radius: 0.25rem;
 
 // A note on the spelling of colour: As much as it pains me to write 'color', we've decided to take on the American, CSS spelling. We’re going to spell "grey" the correct way though.
 // Please forgive us, Canada!

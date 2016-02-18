@@ -68,6 +68,12 @@
 	}
 	add_filter( 'wp_title', 'html5reset_wp_title', 10, 2 );
 
+	add_action('admin_head', 'admin_style');
+
+	function admin_style() {
+		echo '<link rel="stylesheet" type="text/css" href="'.get_bloginfo('template_directory').'/admin.css">';
+	}
+
 //OLD STUFF BELOW
 
 	// Load jQuery
