@@ -44,16 +44,7 @@
 
 	<meta name="Copyright" content="Copyright &copy; <?php bloginfo('name'); ?> <?php echo date('Y'); ?>. All Rights Reserved.">
 
-	<?php
-		/*
-			j.mp/mobileviewport & davidbcalhoun.com/2010/viewport-metatag
-			 - device-width : Occupy full width of the screen in its current orientation
-			 - initial-scale = 1.0 retains dimensions instead of zooming out if page height > device height
-			 - maximum-scale = 1.0 retains dimensions instead of zooming in if page width < device width
-		*/
-		if (true == of_get_option('meta_viewport'))
-			echo '<meta name="viewport" content="' . of_get_option("meta_viewport") . '" />';
-	?>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- concatenate and minify for production -->
 	<link rel="stylesheet" href="<?php echo get_stylesheet_uri(); ?>" />
