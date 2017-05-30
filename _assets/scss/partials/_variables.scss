@@ -33,13 +33,6 @@ $serif: Georgia, serif;
 
 $monospace: Monaco, Menlo, 'Ubuntu Mono', Consolas, monospace;
 
-// Bourbon Config
-$grid-columns: 12;
-$gutter: $line-height;
-$max-width: em(800);
-// $visual-grid         :  true;
-// $visual-grid-index   :  back;
-// $visual-grid-colour  :	 rgba(0, 0, 15, .5);
-
 // Breakpoints
-$small: new-breakpoint(min-width 500px 4);
+$small: 'min-width: 500px';
+$medium: 'min-width: 800px';

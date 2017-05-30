@@ -11,9 +11,6 @@ License URI: http://opensource.org/licenses/bsd-license.php
 
 // Don't change the '/*!' & '*/' comment styles up there. This are critical for Wordpress to recognize this as a theme.
 
-@import 'bourbon';
-@import 'neat';
-
 // Partials are OOCSS components not necessarily related to the site at a stylistic level
 @import 'partials/all';
 

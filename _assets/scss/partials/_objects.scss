@@ -1,4 +1,19 @@
-#{$all-text-inputs} {
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input:not([type]),
+textarea {
   border: 1px solid $light-grey;
   appearance: none;
   color: $dark-grey;
@@ -10,7 +25,10 @@ textarea {
   padding: #{($line-height-unitless/2)}rem;
 }
 
-#{$all-buttons},
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
 .btn {
   background-color: $link-color;
   color: $white;

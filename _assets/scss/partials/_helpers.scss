@@ -1,0 +1,41 @@
+.flex {
+  display: block;
+  @media ($small) {
+    display: flex;
+  }
+}
+
+.col {
+  width: 100%;
+  margin: 0 0 1rem 0;
+  @media ($small) {
+    flex: 1;
+  }
+}
+
+.flex-half {
+  .col {
+    justify-content: space-between;
+    width: 100%;
+    @media ($small) {
+      width: 50%;
+      padding: 0 $line-height;
+    }
+  }
+}
+
+.flex-third {
+  .col {
+    justify-content: space-between;
+    width: 100%;
+    @media ($small) {
+      width: 33.333%;
+      padding: 0 $line-height;
+    }
+  }
+}
+
+.flex-v-align {
+  justify-content: center;
+  align-items: center;
+}
