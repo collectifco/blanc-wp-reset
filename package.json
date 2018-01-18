@@ -1,17 +1,53 @@
 {
-  "name": "blanc",
-  "version": "0.1.0",
+  "name": "exakthet",
+  "version": "1.0.0",
+  "license": "UNLICENSED",
+  "scripts": {
+    "lint": "eslint _assets/js/**/*.js",
+    "prettify:scss": "prettier --write _assets/scss/**/*.scss",
+    "prettify:css": "prettier --write style.css",
+    "prettify:js": "prettier --write _assets/js/**/*.js",
+    "watch:sass": "onchange '_assets/scss/**/*.scss' -- yarn build:sass",
+    "watch:js": "onchange '_assets/js/**/*.js' -- yarn build:js",
+    "uglify:js": "uglifyjs dist/js/lib/index.babel.js -c -o dist/js/index.min.js",
+    "uglify:css": "cleancss -o style.min.css style.css",
+    "babel": "babel _assets/js -d dist/js/lib/",
+    "build:js": "npm-run-all -s babel uglify:js",
+    "build:sass": "node-sass _assets/scss/style.scss style.css",
+    "build": "npm-run-all --parallel build:*",
+    "dev": "npm-run-all --parallel watch:*",
+    "precommit": "lint-staged"
+  },
   "devDependencies": {
-    "babel-preset-es2015": "^6.24.1",
-    "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
-    "gulp-babel": "^6.1.2",
-    "gulp-concat": "^2.6.1",
-    "gulp-cssmin": "^0.2.0",
-    "gulp-notify": "^3.0.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-uglify": "^3.0.0",
-    "gulp-watch": "^4.3.11"
+    "babel-cli": "^6.26.0",
+    "clean-css-cli": "^4.1.10",
+    "eslint": "^4.15.0",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.4.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^6.0.0",
+    "node-sass": "^4.7.2",
+    "onchange": "^3.3.0",
+    "prettier": "^1.10.2",
+    "uglify-js": "^3.3.7",
+    "yarn-run-all": "^3.1.1"
+  },
+  "lint-staged": {
+    "_assets/js/**/*.js": [
+      "yarn prettify:js",
+      "yarn lint --fix",
+      "yarn uglify:js",
+      "git add"
+    ],
+    "_assets/scss/**/*.scss": [
+      "yarn build:scss",
+      "yarn prettify:scss",
+      "git add"
+    ],
+    "*.scss": [
+      "yarn prettify:css",
+      "yarn uglify:css",
+      "git add"
+    ]
   }
 }
